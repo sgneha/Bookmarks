@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 class Bookmark
-  attr_reader :text, :list
-  def initialize(text, list)
-    @text = text
-    @list = list
+  def self.all
+    [
+      'http://www.makersacademy.com',
+      'http://www.destroyallsoftware.com',
+      'http://www.google.com'
+    ]
   end
-
-  def all
-    @list
   end
-end

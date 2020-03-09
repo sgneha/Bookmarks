@@ -2,12 +2,13 @@
 
 require 'bookmark'
 describe Bookmark do
-  subject(:book) { described_class.new(4, [2]) }
-  it 'returns text' do
-    expect(book.text).to eq 4
-  end
-  it 'returns list of bookmarks' do
-    # book.list = [2]
-    expect(book.all).to eq [2]
+  describe '.all' do
+    it 'returns all bookmarks' do
+      bookmarks = Bookmark.all
+
+      expect(bookmarks).to include('http://www.makersacademy.com')
+      expect(bookmarks).to include('http://www.destroyallsoftware.com')
+      expect(bookmarks).to include('http://www.google.com')
+    end
   end
 end
