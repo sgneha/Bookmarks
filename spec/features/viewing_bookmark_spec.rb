@@ -2,7 +2,7 @@
 
 feature 'View Bookmarks' do
   scenario 'view the list' do
-    visit('/')
+    visit('/bookmarks')
     expect(page).to have_content 'Bookmark Manager'
   end
 end

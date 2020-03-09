@@ -22,7 +22,7 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
 ENV['RACK_ENV'] = 'test'
 
-Capybara.app = Bookmark
+Capybara.app = Bookmark_manager
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
