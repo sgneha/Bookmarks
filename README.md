@@ -23,6 +23,7 @@ bundle
 ```
 rackup -p 4567
 ```
+To view bookmarks navigate to page 'localhost:4567/bookmarks'
 
 ### To run tests:
 
