@@ -16,13 +16,20 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
+ENV['ENVIROMENT'] = 'test'
 require 'capybara/rspec'
 # require_relative './features/web_helpers.rb'
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
+require_relative './setup_test_database'
 
 ENV['RACK_ENV'] = 'test'
 
 Capybara.app = BookmarkManager
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
